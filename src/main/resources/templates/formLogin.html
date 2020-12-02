@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulário de Cadastro</title>
+</head>
+<body>
+
+	<form method="POST" th:action="processaLogin">
+		<label>Email</label>
+		<input type="text" placeholder="email@example.com"/>
+		<br>
+		<br>
+		<label>Senha</label>
+		<input type="password"/>
+		<br>
+		<br>
+		<button type="submit">Entrar</button>
+	</form>
+
+</body>
+</html>

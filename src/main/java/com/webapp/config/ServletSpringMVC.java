@@ -1,22 +1,24 @@
-package com.webapp.config;
-
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
-
-	@Override
-	protected Class<?>[] getRootConfigClasses() {
-		return null;
-	}
-
-	@Override
-	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {WebAppConfiguration.class};
-	}
-
-	@Override
-	protected String[] getServletMappings() {
-		return new String[] {"webapp/"};
-	}
-
-}
+//package com.webapp.config;
+//
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+//
+//@Configuration
+//public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
+//
+//	@Override
+//	protected Class<?>[] getRootConfigClasses() {
+//		return null;
+//	}
+//
+//	@Override
+//	protected Class<?>[] getServletConfigClasses() {
+//		return new Class[] {WebAppConfiguration.class};
+//	}
+//
+//	@Override
+//	protected String[] getServletMappings() {
+//		return new String[] {"/"};
+//	}
+//
+//}
