@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/")
@@ -17,16 +18,9 @@ public class HomeController {
 		return "home";
 	}
 	
-	@GetMapping("login")
-	public String login() {
-		return "formLogin";
-	}
-	
 	@PostMapping("processaLogin")
-	public String processaLogin(HttpServletRequest request, Model model) {
+	public String loginValidate(@RequestParam("login") String login, @RequestParam("senha") String senha, Model model) {
 		String view = "formLogin";
-		String login = request.getParameter("login");
-		String senha = request.getParameter("senha");
 		if (login.contentEquals("Clemilson") && senha.contentEquals("123")) {
 			model.addAttribute("usuario", login);
 			model.addAttribute("senha", senha);

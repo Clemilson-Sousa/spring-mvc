@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+	<img th:src="@{/image/logo-spring.png}" style="width: 250px">
 	<h1>Bem vindo!</h1>
 	<p>Usuário: <span th:text="${usuario}"></span></p>
 	<p>Senha: <span th:text="${senha}"></span></p>

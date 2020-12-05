@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login - Aluno</title>
+</head>
+<body>
+	<h2>Login - Aluno</h2>
+	
+	<p style="color: blue"><span th:text="${mensagem}"></span></p>
+	
+	<form method="POST" action="validateAluno">
+		<label>Email</label>
+		<input type="text" placeholder="email" name="login"/>
+		<br>
+		<label>Nome</label>
+		<input type="text" placeholder="nome" name="nome"/>
+		<br>
+		<label>Matricula</label>
+		<input type="text" placeholder="matricula" name="matricula"/>
+		<br>
+		<button type="submit">Entrar</button>
+	</form>
+
+</body>
+</html>
