@@ -19,8 +19,29 @@
 		<label>Matricula</label>
 		<input type="text" placeholder="matricula" name="matricula"/>
 		<br>
-		<button type="submit">Entrar</button>
+		<br>
+		
+		<label>Pais</label>
+		<select name="pais">
+			<option th:each="pais : ${paises}" th:value="${pais}" th:text="${pais}"/>
+		</select>
+		
+		<br>
+		<label>Linguagem de Programção</label> <br>
+		<input name="linguagem" type="radio"
+			th:each="linguagem : ${linguagens}"
+			th:text="${linguagem}"
+			th:value="${linguagem}"/>
+		<br>
+		
+		<label>Fluencia</label><br>
+		<input name="fluencia" type="checkbox"
+			th:each="lingua : ${linguas}"
+			th:text="${lingua}"
+			th:value="${lingua}"/>
+		<br>
+		<input type="submit" value="Login"/>
+		
 	</form>
-
 </body>
 </html>
