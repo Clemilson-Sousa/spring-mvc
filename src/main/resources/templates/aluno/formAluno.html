@@ -9,20 +9,21 @@
 	
 	<p style="color: blue"><span th:text="${mensagem}"></span></p>
 	
-	<form method="POST" action="validateAluno">
-		<label>Email</label>
-		<input type="text" placeholder="email" name="login"/>
-		<br>
+	<form method="POST" action="cadastro" th:object="${aluno}">
+		<input type="hidden" th:field="*{id}"/>
 		<label>Nome</label>
-		<input type="text" placeholder="nome" name="nome"/>
+		<input type="text" placeholder="nome" name="nome" th:field="*{nome}"/>
+		<br>
+		<label>Email</label>
+		<input type="text" placeholder="email" name="login" th:field="*{login}"/>
 		<br>
 		<label>Matricula</label>
-		<input type="text" placeholder="matricula" name="matricula"/>
+		<input type="text" placeholder="matricula" name="matricula" th:field="*{matricula}"/>
 		<br>
 		<br>
 		
 		<label>Pais</label>
-		<select name="pais">
+		<select name="pais" th:field="*{pais}">
 			<option th:each="pais : ${paises}" th:value="${pais}" th:text="${pais}"/>
 		</select>
 		
@@ -31,16 +32,16 @@
 		<input name="linguagem" type="radio"
 			th:each="linguagem : ${linguagens}"
 			th:text="${linguagem}"
-			th:value="${linguagem}"/>
+			th:value="${linguagem}" th:field="*{linguagem}"/>
 		<br>
 		
 		<label>Fluencia</label><br>
 		<input name="fluencia" type="checkbox"
 			th:each="lingua : ${linguas}"
 			th:text="${lingua}"
-			th:value="${lingua}"/>
+			th:value="${lingua}" th:field="*{fluencia}"/>
 		<br>
-		<input type="submit" value="Login"/>
+		<input type="submit" value="Cadastrar"/>
 		
 	</form>
 </body>

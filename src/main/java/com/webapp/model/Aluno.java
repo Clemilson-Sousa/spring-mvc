@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Aluno {
 	
+	private Integer id;
 	private String nome;
 	private Long matricula;
 	private String login;
@@ -11,6 +12,12 @@ public class Aluno {
 	private String linguagem;
 	private List<String> fluencia;
 	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
