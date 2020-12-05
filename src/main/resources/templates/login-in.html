@@ -6,8 +6,7 @@
 </head>
 <body>
 	<h1>Bem vindo!</h1>
-	<a href="#">Home</a>&nbsp;&nbsp;&nbsp;
-	<a th:href="@{login}">Login</a>&nbsp;&nbsp;&nbsp;
-	<a href="#">Sair</a>
+	<p>Usuário: <span th:text="${usuario}"></span></p>
+	<p>Senha: <span th:text="${senha}"></span></p>
 </body>
 </html>
