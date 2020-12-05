@@ -43,7 +43,12 @@ public class AlunoController {
 	@GetMapping("/{id}")
 	public String update(@PathVariable Integer id, Model model) {
 		Aluno aluno = alunoDao.findById(id);
-		model.addAttribute("aluno", aluno);
+		if(aluno == null) {
+			model.addAttribute("mensagem", "Aluno não encontrado!");
+			model.addAttribute("aluno", new Aluno());
+		} else {
+			model.addAttribute("aluno", aluno);
+		}
 		return "aluno/formAluno";
 	}
 
